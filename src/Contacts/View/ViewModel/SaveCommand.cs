@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-using View.Model.Services;
+using System.IO;
 using View.Model;
 
 namespace View.ViewModel
@@ -14,16 +14,22 @@ namespace View.ViewModel
             _viewModel = viewModel;
         }
 
-        public bool CanExecute(object parameter) => true;
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
 
         public void Execute(object parameter)
         {
-            ContactSerializer.Save(new Contact
+            string filePath = "contact_save.txt";
+            try
             {
-                Name = _viewModel.Name,
-                PhoneNumber = _viewModel.PhoneNumber,
-                Email = _viewModel.Email
-            });
+                    File.WriteAllText(filePath, $"{_viewModel.Name}\n{_viewModel.PhoneNumber}\n{_viewModel.Email}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка сохранения: {ex.Message}");
+            }
         }
 
         public event EventHandler CanExecuteChanged;

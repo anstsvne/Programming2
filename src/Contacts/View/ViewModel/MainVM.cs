@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using View.Model;
+using System.Windows.Input;
 
 namespace View.ViewModel
 {
@@ -13,6 +14,14 @@ namespace View.ViewModel
     {
         private Contact _contact;
 
+        public MainVM()
+        {
+            _contact = new Contact();
+            SaveCommand = new SaveCommand(this);
+            LoadCommand = new LoadCommand(this);
+        }
+        public ICommand SaveCommand { get; }
+        public ICommand LoadCommand { get; }
         public string Name
         {
             get => _contact.Name;
@@ -31,12 +40,11 @@ namespace View.ViewModel
             set { _contact.Email = value; OnPropertyChanged(); }
         }
 
-        
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
 }

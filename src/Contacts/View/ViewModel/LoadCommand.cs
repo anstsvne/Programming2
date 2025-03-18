@@ -7,6 +7,12 @@ namespace View.ViewModel
 {
     public class LoadCommand : ICommand
     {
+        private readonly MainVM _viewModel;
+
+        public LoadCommand(MainVM viewModel)
+        {
+            _viewModel = viewModel;
+        }
         public event EventHandler CanExecuteChanged;
 
         public void Execute(object parameter)
@@ -19,8 +25,9 @@ namespace View.ViewModel
                     string[] data = File.ReadAllLines(filePath);
                     if (data.Length >= 3)
                     {
-                        Contact loadedContact = new Contact(data[0], data[1], data[2]);
-                        Console.WriteLine($"Загруженные данные: {loadedContact.Name}, {loadedContact.PhoneNumber}, {loadedContact.Email}");
+                        _viewModel.Name = data[0];
+                        _viewModel.PhoneNumber = data[1];
+                        _viewModel.Email = data[2];
                     }
                 }
                 catch (Exception ex)
