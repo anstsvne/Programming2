@@ -11,7 +11,7 @@ namespace View.ViewModel
 {
     public class MainVM : INotifyPropertyChanged
     {
-        private Contact _contact = new Contact();
+        private Contact _contact;
 
         public string Name
         {
