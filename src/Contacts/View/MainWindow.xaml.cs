@@ -14,14 +14,18 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using View.ViewModel;
 
-
 namespace View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Главное окно приложения (MainWindow).
+    /// Определяет пользовательский интерфейс и связывает его с ViewModel.
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="MainWindow"/>.
+        /// Устанавливает контекст данных для связывания с ViewModel.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
