@@ -1,20 +1,29 @@
 ﻿using System;
 using System.IO;
 using Newtonsoft.Json;
+using View.Model;
 
 namespace View.Model.Services
 {
+    /// <summary>
+    /// Статический класс для сериализации и десериализации контактов в JSON-файл.
+    /// </summary>
     public static class ContactSerializer
     {
-        private static readonly string _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"Contacts","contacts.json");
+        /// <summary>
+        /// Поле, содержащее путь к файлу JSON, где хранятся контакты.
+        /// </summary>
+        private static readonly string _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "contacts.json");
 
-        public static void Save(Contact contact)
+        /// <summary>
+        /// Сохраняет контакт в JSON-файл.
+        /// </summary>
+        /// <param name="contact">Объект Contact, который необходимо сохранить.</param>
+        public static void SaveContact(Contact contact)
         {
             try
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(_filePath));
-
-                var json = JsonConvert.SerializeObject(contact, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(contact, Formatting.Indented);
                 File.WriteAllText(_filePath, json);
             }
             catch (Exception ex)
@@ -23,16 +32,17 @@ namespace View.Model.Services
             }
         }
 
-        public static Contact Load()
+        /// <summary>
+        /// Загружает контакт из JSON-файла.
+        /// </summary>
+        /// <returns>Объект Contact, если файл существует и успешно загружен; иначе новый пустой объект Contact.</returns>
+        public static Contact LoadContact()
         {
             try
             {
                 if (File.Exists(_filePath))
                 {
-                    var json = File.ReadAllText(_filePath);
-                    if (string.IsNullOrWhiteSpace(json))
-                        return new Contact();
-
+                    string json = File.ReadAllText(_filePath);
                     return JsonConvert.DeserializeObject<Contact>(json) ?? new Contact();
                 }
             }

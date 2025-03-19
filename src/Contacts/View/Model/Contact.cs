@@ -7,28 +7,47 @@ using System.Xml.Linq;
 
 namespace View.Model
 {
+    /// <summary>
+    /// Класс, представляющий контакт с именем, номером телефона и электронной почтой.
+    /// </summary>
     public class Contact
     {
+        /// <summary>
+        /// Получает или задает имя контакта.
+        /// </summary>
         public string Name { get; set; }
-        private string phoneNumber = "example@inbox.ru";
-        private string email = "8-923-633-2689";
 
+        /// <summary>
+        /// Получает или задает номер телефона контакта.
+        /// </summary>
+        public string PhoneNumber { get; set; }
 
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
+        /// <summary>
+        /// Получает или задает электронную почту контакта.
+        /// </summary>
+        public string Email { get; set; }
 
-        public string PhoneNumber
-        {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
-        }
-
+        /// <summary>
+        /// Получает или задает дополнительный номер телефона контакта.
+        /// </summary>
         public string Phone { get; set; }
 
-        public Contact() { }
+        /// <summary>
+        /// Конструктор по умолчанию. Инициализирует свойства пустыми строками.
+        /// </summary>
+        public Contact()
+        {
+            Name = string.Empty;
+            PhoneNumber = string.Empty;
+            Email = string.Empty;
+        }
+
+        /// <summary>
+        /// Параметризованный конструктор. Инициализирует свойства переданными значениями.
+        /// </summary>
+        /// <param name="name">Имя контакта.</param>
+        /// <param name="phoneNumber">Номер телефона контакта.</param>
+        /// <param name="email">Электронная почта контакта.</param>
         public Contact(string name, string phoneNumber, string email)
         {
             Name = name;

@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
         mc:Ignorable="d"
+        MinHeight="420"  
+        MinWidth="550"
         Title="Contacts" Height="410" Width="470">
     <Grid Margin="15,15,15,15">
         <Grid.ColumnDefinitions>
