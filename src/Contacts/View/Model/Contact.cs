@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace View.Model
+﻿namespace View.Model
 {
     /// <summary>
     /// Класс, представляющий контакт с именем, номером телефона и электронной почтой.
@@ -26,11 +19,6 @@ namespace View.Model
         /// Получает или задает электронную почту контакта.
         /// </summary>
         public string Email { get; set; }
-
-        /// <summary>
-        /// Получает или задает дополнительный номер телефона контакта.
-        /// </summary>
-        public string Phone { get; set; }
 
         /// <summary>
         /// Конструктор по умолчанию. Инициализирует свойства пустыми строками.

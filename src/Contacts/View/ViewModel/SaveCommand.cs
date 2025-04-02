@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Input;
-using System.IO;
 using View.Model;
 using View.Model.Services;
 
@@ -15,8 +14,7 @@ namespace View.ViewModel
         /// <summary>
         /// Приватное поле класса MainVM с информацией контакта.
         /// </summary>
-        private readonly MainVM _viewModel;
-
+        private readonly MainVM _mainVM;
 
         /// <summary>
         /// Команда сохранения.
@@ -24,9 +22,8 @@ namespace View.ViewModel
         /// <param name="viewModel"></param>
         public SaveCommand(MainVM viewModel)
         {
-            _viewModel = viewModel;
+            _mainVM = viewModel;
         }
-
 
         /// <summary>
         /// Определяет, может ли команда выполняться.
@@ -44,7 +41,7 @@ namespace View.ViewModel
         /// <param name="parameter">Ожидается объект типа Contact.</param>
         public void Execute(object parameter)
         {
-            Contact contact = new Contact(_viewModel.Name, _viewModel.PhoneNumber, _viewModel.Email);
+            Contact contact = new Contact(_mainVM.Name, _mainVM.PhoneNumber, _mainVM.Email);
             ContactSerializer.SaveContact(contact);
         }
 

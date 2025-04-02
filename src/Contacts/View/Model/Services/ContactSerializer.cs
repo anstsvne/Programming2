@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using Newtonsoft.Json;
-using View.Model;
 
 namespace View.Model.Services
 {
@@ -13,7 +12,10 @@ namespace View.Model.Services
         /// <summary>
         /// Поле, содержащее путь к файлу JSON, где хранятся контакты.
         /// </summary>
-        private static readonly string _filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "contacts.json");
+        private static readonly string _filePath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), 
+            "contacts.json"
+            );
 
         /// <summary>
         /// Сохраняет контакт в JSON-файл.

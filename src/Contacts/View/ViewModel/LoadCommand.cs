@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Input;
 using View.Model;
 using View.Model.Services;
@@ -15,7 +14,7 @@ namespace View.ViewModel
         /// <summary>
         /// Приватное поле класса MainVM, содержащее данные контакта.
         /// </summary>
-        private readonly MainVM _viewModel;
+        private readonly MainVM _mainVM;
 
         /// <summary>
         /// Создает новую команду загрузки.
@@ -23,7 +22,7 @@ namespace View.ViewModel
         /// <param name="viewModel">Экземпляр ViewModel, в который будут загружены данные контакта.</param>
         public LoadCommand(MainVM viewModel)
         {
-            _viewModel = viewModel;
+            _mainVM = viewModel;
         }
 
         /// <summary>
@@ -38,9 +37,9 @@ namespace View.ViewModel
         public void Execute(object parameter)
         {
             Contact contact = ContactSerializer.LoadContact();
-            _viewModel.Name = contact.Name;
-            _viewModel.PhoneNumber = contact.PhoneNumber;
-            _viewModel.Email = contact.Email;
+            _mainVM.Name = contact.Name;
+            _mainVM.PhoneNumber = contact.PhoneNumber;
+            _mainVM.Email = contact.Email;
         }
 
         /// <summary>
