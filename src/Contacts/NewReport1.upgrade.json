@@ -1,0 +1,692 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": true
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 8.0"
+  },
+  "analysisStartTime": "2025-04-02T12:08:20.8644021Z",
+  "analysisEndTime": "2025-04-02T12:08:21.1713586Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 4,
+      "incidents": 23,
+      "effort": 23
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 14,
+        "Optional": 0,
+        "Potential": 9,
+        "Information": 0
+      },
+      "category": {
+        "Project": 2,
+        "Api": 21
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "View\\View.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 23,
+      "ruleInstances": [
+        {
+          "incidentId": "765a75d7-a0e3-4177-b0b2-a08ced6e2985",
+          "ruleId": "Project.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "View\\View.csproj"
+          }
+        },
+        {
+          "incidentId": "2d6ce20f-ebc2-4446-898c-cfe63c6c47b3",
+          "ruleId": "Project.0002",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "\u0422\u0435\u043A\u0443\u0449\u0438\u0435: .NETFramework,Version=v4.7.2\n\u041D\u043E\u0432\u043E\u0435: net8.0-windows",
+              "protected": "\u0422\u0435\u043A\u0443\u0449\u0438\u0435: .NETFramework,Version=v4.7.2\n\u041D\u043E\u0432\u043E\u0435: net8.0-windows"
+            },
+            "kind": "File",
+            "path": "View\\View.csproj",
+            "snippet": "\u0422\u0435\u043A\u0443\u0449\u0438\u0435: .NETFramework,Version=v4.7.2\n\u041D\u043E\u0432\u043E\u0435: net8.0-windows",
+            "protectedSnippet": "\u0422\u0435\u043A\u0443\u0449\u0438\u0435: .NETFramework,Version=v4.7.2\n\u041D\u043E\u0432\u043E\u0435: net8.0-windows"
+          }
+        },
+        {
+          "incidentId": "3c25a2ad-ea11-4846-b4dc-1c0979985099",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 System.Configuration.ConfigurationManager, 9.0.0-preview.6.24302.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ApplicationSettingsBase",
+              "protected": "M:System.Configuration.ApplicationSettingsBase.#ctor"
+            },
+            "kind": "File",
+            "path": "View\\Properties\\Settings.Designer.cs",
+            "snippet": "ApplicationSettingsBase",
+            "protectedSnippet": "M:System.Configuration.ApplicationSettingsBase.#ctor",
+            "label": "M:System.Configuration.ApplicationSettingsBase.#ctor",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.configuration.applicationsettingsbase.applicationsettingsbase",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 74
+          }
+        },
+        {
+          "incidentId": "4467dd03-e274-4f20-bb01-9253cc0910b1",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+              "protected": "T:Newtonsoft.Json.Formatting"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+            "protectedSnippet": "T:Newtonsoft.Json.Formatting",
+            "label": "T:Newtonsoft.Json.Formatting",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.formatting",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "55e7c54f-e41e-4507-aebb-9001e4d17f20",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainWindow()\r\n        {\r\n            InitializeComponent();\r\n            DataContext = new MainVM();\r\n        }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "View\\MainWindow.xaml.cs",
+            "snippet": "public MainWindow()\r\n        {\r\n            InitializeComponent();\r\n            DataContext = new MainVM();\r\n        }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window.window",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d1f3674a-46c2-4cce-a3f2-5d4b2326a697",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Window",
+              "protected": "T:System.Windows.Window"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\MainWindow.g.i.cs",
+            "snippet": "Window",
+            "protectedSnippet": "T:System.Windows.Window",
+            "label": "T:System.Windows.Window",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window",
+                "isCustom": false
+              }
+            ],
+            "line": 39,
+            "column": 53
+          }
+        },
+        {
+          "incidentId": "8bb8d9ab-f150-4b25-be93-aa9ff60e2960",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "IComponentConnector",
+              "protected": "T:System.Windows.Markup.IComponentConnector"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\MainWindow.g.i.cs",
+            "snippet": "IComponentConnector",
+            "protectedSnippet": "T:System.Windows.Markup.IComponentConnector",
+            "label": "T:System.Windows.Markup.IComponentConnector",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector",
+                "isCustom": false
+              }
+            ],
+            "line": 39,
+            "column": 83
+          }
+        },
+        {
+          "incidentId": "04e45625-2127-451b-9088-b39f5ee4d9e0",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DataContext = new MainVM();",
+              "protected": "P:System.Windows.FrameworkElement.DataContext"
+            },
+            "kind": "File",
+            "path": "View\\MainWindow.xaml.cs",
+            "snippet": "DataContext = new MainVM();",
+            "protectedSnippet": "P:System.Windows.FrameworkElement.DataContext",
+            "label": "P:System.Windows.FrameworkElement.DataContext",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.frameworkelement.datacontext",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "fd7ec8e0-f90b-42ff-8036-8ff4bcb3ce6c",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 System.Configuration.ConfigurationManager, 9.0.0-preview.6.24302.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ApplicationSettingsBase",
+              "protected": "T:System.Configuration.ApplicationSettingsBase"
+            },
+            "kind": "File",
+            "path": "View\\Properties\\Settings.Designer.cs",
+            "snippet": "ApplicationSettingsBase",
+            "protectedSnippet": "T:System.Configuration.ApplicationSettingsBase",
+            "label": "T:System.Configuration.ApplicationSettingsBase",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.configuration.applicationsettingsbase",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 74
+          }
+        },
+        {
+          "incidentId": "1d7fc257-2ec1-432a-b289-ae674686fe7c",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+              "protected": "T:Newtonsoft.Json.JsonConvert"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+            "protectedSnippet": "T:Newtonsoft.Json.JsonConvert",
+            "label": "T:Newtonsoft.Json.JsonConvert",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.jsonconvert",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "4821f4fc-978c-4a0a-8283-9b99a0074d23",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "label": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.loadcomponent",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8f27c15d-0fe1-41b1-a0ec-49cd7a6c2cd0",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return JsonConvert.DeserializeObject\u003CContact\u003E(json) ?? new Contact();",
+              "protected": "T:Newtonsoft.Json.JsonConvert"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "return JsonConvert.DeserializeObject\u003CContact\u003E(json) ?? new Contact();",
+            "protectedSnippet": "T:Newtonsoft.Json.JsonConvert",
+            "label": "T:Newtonsoft.Json.JsonConvert",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.jsonconvert",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "bfa37da6-3582-42d3-b099-8e522f44f0bb",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e72980c3-d11f-4bf6-a13b-d828beb3f65e",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainWindow()\r\n        {\r\n            InitializeComponent();\r\n            DataContext = new MainVM();\r\n        }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "View\\MainWindow.xaml.cs",
+            "snippet": "public MainWindow()\r\n        {\r\n            InitializeComponent();\r\n            DataContext = new MainVM();\r\n        }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window.window",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "389e0e24-bf08-4a23-97dc-911fdbd24147",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DataContext = new MainVM();",
+              "protected": "P:System.Windows.FrameworkElement.DataContext"
+            },
+            "kind": "File",
+            "path": "View\\MainWindow.xaml.cs",
+            "snippet": "DataContext = new MainVM();",
+            "protectedSnippet": "P:System.Windows.FrameworkElement.DataContext",
+            "label": "P:System.Windows.FrameworkElement.DataContext",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.frameworkelement.datacontext",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "6e164375-68f2-4b24-9a38-59ab62bd7c43",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Application",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\App.g.i.cs",
+            "snippet": "Application",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 40,
+            "column": 46
+          }
+        },
+        {
+          "incidentId": "0d99b153-c463-4630-999c-d96783021f03",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Application",
+              "protected": "M:System.Windows.Application.#ctor"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\App.g.i.cs",
+            "snippet": "Application",
+            "protectedSnippet": "M:System.Windows.Application.#ctor",
+            "label": "M:System.Windows.Application.#ctor",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.application",
+                "isCustom": false
+              }
+            ],
+            "line": 40,
+            "column": 46
+          }
+        },
+        {
+          "incidentId": "3dee6817-4ecd-46cb-9297-2be6ebfb358b",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.StartupUri = new System.Uri(\u0022MainWindow.xaml\u0022, System.UriKind.Relative);",
+              "protected": "P:System.Windows.Application.StartupUri"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\App.g.i.cs",
+            "snippet": "this.StartupUri = new System.Uri(\u0022MainWindow.xaml\u0022, System.UriKind.Relative);",
+            "protectedSnippet": "P:System.Windows.Application.StartupUri",
+            "label": "P:System.Windows.Application.StartupUri",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.startupuri",
+                "isCustom": false
+              }
+            ],
+            "line": 50,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "4616d530-96ab-4bac-b974-276d673435fd",
+          "ruleId": "Api.0001",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.Run();",
+              "protected": "M:System.Windows.Application.Run"
+            },
+            "kind": "File",
+            "path": "View\\obj\\Debug\\App.g.i.cs",
+            "snippet": "app.Run();",
+            "protectedSnippet": "M:System.Windows.Application.Run",
+            "label": "M:System.Windows.Application.Run",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.run",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "db0d02c0-c14d-4ac3-87b0-acf0424ae3fa",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+              "protected": "M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object,Newtonsoft.Json.Formatting)"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+            "protectedSnippet": "M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object,Newtonsoft.Json.Formatting)",
+            "label": "M:Newtonsoft.Json.JsonConvert.SerializeObject(System.Object,Newtonsoft.Json.Formatting)",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.jsonconvert.serializeobject",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "1d7f21a6-1209-4f40-8432-39cdb14d9577",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return JsonConvert.DeserializeObject\u003CContact\u003E(json) ?? new Contact();",
+              "protected": "M:Newtonsoft.Json.JsonConvert.DeserializeObject\u0060\u00601(System.String)"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "return JsonConvert.DeserializeObject\u003CContact\u003E(json) ?? new Contact();",
+            "protectedSnippet": "M:Newtonsoft.Json.JsonConvert.DeserializeObject\u0060\u00601(System.String)",
+            "label": "M:Newtonsoft.Json.JsonConvert.DeserializeObject\u0060\u00601(System.String)",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.jsonconvert.deserializeobject",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "6a3ad8ec-aa5f-4c6f-8d81-720429c771f5",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+              "protected": "F:Newtonsoft.Json.Formatting.Indented"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+            "protectedSnippet": "F:Newtonsoft.Json.Formatting.Indented",
+            "label": "F:Newtonsoft.Json.Formatting.Indented",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.formatting.indented",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "2a4495a3-0f42-4abb-a823-5143122c02f7",
+          "ruleId": "Api.0002",
+          "description": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 Newtonsoft.Json, 13.0.3.",
+          "projectPath": "View\\View.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+              "protected": "T:Newtonsoft.Json.Formatting"
+            },
+            "kind": "File",
+            "path": "View\\Model\\Services\\ContactSerializer.cs",
+            "snippet": "string json = JsonConvert.SerializeObject(contact, Formatting.Indented);",
+            "protectedSnippet": "T:Newtonsoft.Json.Formatting",
+            "label": "T:Newtonsoft.Json.Formatting",
+            "links": [
+              {
+                "title": "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044F API",
+                "url": "https://learn.microsoft.com/dotnet/api/newtonsoft.json.formatting",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 16
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "Project.0001": {
+      "id": "Project.0001",
+      "description": "\u0424\u0430\u0439\u043B \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u044C \u0432 \u0441\u0442\u0438\u043B\u044C \u043F\u0430\u043A\u0435\u0442\u0430 SDK. \u041F\u0440\u043E\u0435\u043A\u0442\u044B \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B .NET \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0444\u043E\u0440\u043C\u0430\u0442\u0430 \u0444\u0430\u0439\u043B\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F \u043F\u0430\u043A\u0435\u0442\u0430 SDK, \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0435\u0433\u043E \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u0443 \u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u0440\u043E\u0435\u043A\u0442\u0430.",
+      "label": "\u0424\u0430\u0439\u043B \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043F\u0440\u0435\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u044C \u0432 \u0441\u0442\u0438\u043B\u044C \u043F\u0430\u043A\u0435\u0442\u0430 SDK",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u041E\u0431\u0437\u043E\u0440 \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u0441 .NET Framework \u043D\u0430 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "\u041F\u0430\u043A\u0435\u0442\u044B SDK \u043F\u0440\u043E\u0435\u043A\u0442\u0430 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "\u0426\u0435\u043B\u0435\u0432\u044B\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u043D\u0430 \u043D\u043E\u0432\u0443\u044E \u0446\u0435\u043B\u0435\u0432\u0443\u044E \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0443, \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u0443\u044E \u0434\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u044F.\n\n\u0412\u043E \u0432\u0440\u0435\u043C\u044F \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u044F \u0446\u0435\u043B\u0435\u0432\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u0431\u0443\u0434\u0435\u0442 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u043D\u0430 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0443\u044E \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0443, \u0435\u0441\u043B\u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043C\u043E. \u0412 \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0441\u043B\u0443\u0447\u0430\u044F\u0445 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u043F\u0440\u0438\u0432\u0435\u0434\u0435\u0442 \u043A \u043D\u0430\u043B\u0438\u0447\u0438\u044E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0446\u0435\u043B\u0435\u0432\u044B\u0445 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C, \u0435\u0441\u043B\u0438 \u0432 \u043F\u0440\u043E\u0435\u043A\u0442\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B\u0438\u0441\u044C \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u044B, \u0443 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0442\u0435\u043F\u0435\u0440\u044C \u0435\u0441\u0442\u044C \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u0432 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0432\u0435\u0440\u0441\u0438\u044F\u0445 .NET (Windows, iOS, Android \u0438 \u0442. \u0434.).",
+      "label": "\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0446\u0435\u043B\u0435\u0432\u044B\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u043F\u0440\u043E\u0435\u043A\u0442\u0430",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u041E\u0431\u0437\u043E\u0440 \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 \u0441 .NET Framework \u043D\u0430 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "\u041F\u0430\u043A\u0435\u0442\u044B SDK \u043F\u0440\u043E\u0435\u043A\u0442\u0430 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "description": "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 API, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u043B\u0438 \u0432 \u0431\u043E\u043B\u0435\u0435 \u0441\u0442\u0430\u0440\u044B\u0445 \u0432\u0435\u0440\u0441\u0438\u044F\u0445 .NET Framework, \u0431\u044B\u043B\u0438 \u043F\u0435\u0440\u0435\u043C\u0435\u0449\u0435\u043D\u044B \u0432 \u0430\u0432\u0442\u043E\u043D\u043E\u043C\u043D\u044B\u0435 \u043F\u0430\u043A\u0435\u0442\u044B NuGet, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u043D\u043E \u0431\u044B\u043B\u043E \u0431\u044B \u044F\u0432\u043D\u043E \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432 \u043F\u0440\u043E\u0435\u043A\u0442\u044B.",
+      "label": "API \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D \u0432 \u043F\u0430\u043A\u0435\u0442\u0435 NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0432 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "description": "API \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 .NET. \u0410\u043B\u044C\u0442\u0435\u0440\u043D\u0430\u0442\u0438\u0432\u043D\u044B\u0435 \u0438\u043B\u0438 \u0437\u0430\u043C\u0435\u043D\u044F\u044E\u0449\u0438\u0435 \u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0441\u043C. \u0432 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u0438 \u043F\u043E \u043A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u043C \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F\u043C.",
+      "label": "API \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0432 .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
