@@ -21,6 +21,9 @@
     <Resource Include="contacts_icon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Controls\photo_placeholder_100x100.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="photo_placeholder_100x100.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

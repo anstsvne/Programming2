@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="View.Controls.ContactControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={RelativeSource Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Фото -->
+        <StackPanel Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Top">
+            <Image Width="100" Height="100" Source="/Controls/photo_placeholder_100x100.png"/>
+        </StackPanel>
+
+        <!-- Поля -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Top">
+            <Label Content="Name:" Margin="0,0,0,2"/>
+            <TextBox 
+                Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                Margin="0,0,0,5"
+                IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+            <Label Content="Phone Number:" Margin="0,0,0,2"/>
+            <TextBox 
+                Text="{Binding PhoneNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                Margin="0,0,0,5"
+                IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                PreviewTextInput="PhoneNumber_PreviewTextInput"
+                DataObject.Pasting="PhoneNumber_Pasting"/>
+
+            <Label Content="Email:" Margin="0,0,0,2"/>
+            <TextBox 
+                Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                Margin="0,0,0,10"
+                IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
 
@@ -40,18 +39,18 @@ namespace View.Model
         /// <summary>
         /// Регулярное выражение для проверки корректности номера телефона.
         /// </summary>
-        public static readonly Regex PhoneNumberRegex =
+        public static readonly Regex PhoneNumberReg =
             new Regex(@"^\+?(\d{1,3})?[-. (]*(\d{1,4})[-. )]*(\d{1,4})[-. ]*(\d{1,9})$");
 
         /// <summary>
         /// Регулярное выражение для проверки корректности электронной почты.
         /// </summary>
-        public static readonly Regex EmailRegex = new Regex(@"^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$");
+        public static readonly Regex EmailReg = new Regex(@"^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$");
 
         /// <summary>
         /// Регулярное выражение для маски ввода номера телефона.
         /// </summary>
-        public static readonly Regex PhoneNumberMask = new Regex(@"^[0-9+() -]*$");
+        public static readonly Regex NumberMask = new Regex(@"^[0-9+() -]*$");
 
         /// <summary>
         /// Событие, которое происходит при изменении значения свойства.
@@ -69,6 +68,7 @@ namespace View.Model
                 if (_name != value)
                 {
                     _name = value;
+                    ValidateProperty(nameof(Name), value);
                     OnPropertyChanged(nameof(Name));
                 }
             }
@@ -85,6 +85,7 @@ namespace View.Model
                 if (_phoneNumber != value)
                 {
                     _phoneNumber = value;
+                    ValidateProperty(nameof(PhoneNumber), value);
                     OnPropertyChanged(nameof(PhoneNumber));
                 }
             }
@@ -101,6 +102,7 @@ namespace View.Model
                 if (_email != value)
                 {
                     _email = value;
+                    ValidateProperty(nameof(Email), value);
                     OnPropertyChanged(nameof(Email));
                 }
             }
@@ -140,19 +142,19 @@ namespace View.Model
                         error = "Имя не должно превышать 100 символов.";
                     break;
 
-                case nameof(_phoneNumber):
+                case nameof(PhoneNumber):
                     if (string.IsNullOrWhiteSpace(value))
                     {
                         error = "Номер телефона не может быть пустым.";
                     }
                     else
                     {
-                        if (!PhoneNumberMask.IsMatch(value))
+                        if (!NumberMask.IsMatch(value))
                             error = "Номер телефона содержит недопустимые символы.";
                         else if (value.Length > MaxLengthNumber)
                             error = "Номер телефона не должен превышать 100 символов.";
-                        else if (!PhoneNumberRegex.IsMatch(value))
-                            error = "Номер телефона имеет неверный формат. Пример: +7 (123) 456-7890";
+                        else if (!PhoneNumberReg.IsMatch(value))
+                            error = "Номер телефона имеет неверный формат. Пример: 8-(966)-666-0066 или +7-(966)-666-0066";
                     }
                     break;
 
@@ -165,8 +167,8 @@ namespace View.Model
                     {
                         if (value.Length > MaxLengthEmail)
                             error = "Email не должен превышать 100 символов.";
-                        else if (!EmailRegex.IsMatch(value))
-                            error = "Email имеет неверный формат. Пример: example@domain.com";
+                        else if (!EmailReg.IsMatch(value))
+                            error = "Email имеет неверный формат. Пример: example@domain.ru";
                     }
                     break;
             }
